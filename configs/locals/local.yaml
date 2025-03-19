@@ -1,5 +1,5 @@
 local:
-  root.dir: emu
+  root.dir: kafi
 
 schema_registry:
   schema.registry.url: http://localhost:8081
