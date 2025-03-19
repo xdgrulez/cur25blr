@@ -1,0 +1,27 @@
+kafka:
+  bootstrap.servers: ${KAFI_KAFKA_SERVER}
+  security.protocol: SASL_SSL
+  sasl.mechanisms: PLAIN
+  sasl.username: ${KAFI_KAFKA_USERNAME}
+  sasl.password: ${KAFI_KAFKA_PASSWORD}
+  
+schema_registry:
+  schema.registry.url: ${KAFI_SCHEMA_REGISTRY_URL}
+  basic.auth.credentials.source: USER_INFO
+  basic.auth.user.info: ${KAFI_SCHEMA_REGISTRY_USER_INFO}
+
+kafi:
+  flush.timeout: -1.0
+  produce.batch.size: 1000
+  retention.ms: 604800000
+  consume.timeout: 5.0
+  consume.batch.size: 1000
+  consumer.group.prefix: ""
+  enable.auto.commit: false
+  session.timeout.ms: 45000
+  block.num.retries: 10
+  block.interval: 0.5
+  auto.offset.reset: earliest
+  progress.num.messages: 1000
+  key.type: str
+  value.type: json
